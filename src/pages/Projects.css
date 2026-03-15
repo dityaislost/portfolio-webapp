@@ -1,13 +1,13 @@
 .projects-container {
-  padding: 120px 20px;
+  padding: 200px 20px;
   background-color: #141414;
   color: #fff;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller min-width */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, 350px);
+  gap: 30px;
   justify-content: center;
 }
 
@@ -20,8 +20,7 @@
   animation: fadeInUp 0.5s forwards ease-in-out;
   animation-delay: var(--delay);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 350px; /* Limit max width */
-  margin: 0 auto;
+  width: 350px;
 }
 
 .project-card:hover {
