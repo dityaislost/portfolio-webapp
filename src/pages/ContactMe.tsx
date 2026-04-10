@@ -153,18 +153,18 @@ const ContactMe: React.FC = () => {
           <p>I'm always up for a chat or a coffee! Feel free to reach out.</p>
         </div>
         <div className="contact-details">
-          <div className="contact-item">
+          <a href={`mailto:${userData.email}`} className="contact-item contact-link-wrapper">
             <FaEnvelope className="contact-icon" />
-            <a href={`mailto:${userData.email}`} className="contact-link">
+            <span className="contact-link">
               {userData.email}
-            </a>
-          </div>
-          <div className="contact-item">
+            </span>
+          </a>
+          <a href={`tel:${userData.phoneNumber}`} className="contact-item contact-link-wrapper">
             <FaPhoneAlt className="contact-icon" />
-            <a href={`tel:${userData.phoneNumber}`} className="contact-link">
+            <span className="contact-link">
               {userData.phoneNumber}
-            </a>
-          </div>
+            </span>
+          </a>
           <div className="contact-fun">
             <p>Or catch up over a coffee ☕</p>
             <FaCoffee className="coffee-icon" />

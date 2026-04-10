@@ -1,13 +1,42 @@
 .projects-container {
-  padding: 200px 20px;
+  padding: 120px 20px 60px;
   background-color: #141414;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================
+   SECTION HEADING - White with red underline
+   ============================ */
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #e50914;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
+  width: 100%;
+  max-width: 1200px;
   justify-content: center;
 }
 
@@ -20,7 +49,7 @@
   animation: fadeInUp 0.5s forwards ease-in-out;
   animation-delay: var(--delay);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 350px;
+  width: 100%;
 }
 
 .project-card:hover {
@@ -32,7 +61,8 @@
 .project-image {
   width: 100%;
   height: 250px; /* Reduced from 350px */
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #000;
   border-bottom: 2px solid #e50914;
   transition: transform 0.3s ease;
 }

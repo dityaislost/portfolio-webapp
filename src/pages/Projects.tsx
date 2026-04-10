@@ -76,6 +76,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="projects-container">
+      <h2 className="section-heading">Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div

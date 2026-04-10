@@ -1,6 +1,7 @@
 import { Project } from '../types';
 import authScanImg from '../images/authscan.png';
 import aiTripPlannerImg from '../images/ai trip planner.png';
+import bookurshowImg from '../images/bookurshow.png';
 
 const projects: Project[] = [
   {
@@ -19,6 +20,15 @@ const projects: Project[] = [
     techUsed: 'Python, Computer Vision, OCR, SHA-256, LLaMA-vision',
     image: {
       url: authScanImg,
+    },
+  },
+  {
+    title: 'Bookurshow',
+    description:
+      'A movie and event booking platform similar to BookMyShow, featuring AI integrations and a robust Java backend for scalable booking management.',
+    techUsed: 'Java, Spring Boot, React, Artificial Intelligence',
+    image: {
+      url: bookurshowImg,
     },
   },
 ];
