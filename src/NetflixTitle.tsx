@@ -10,18 +10,20 @@ const NetflixTitle = () => {
 
   const handlePlaySound = () => {
     const audio = new Audio(netflixSound);
-    audio.play().catch(error => console.error("Audio play error:", error));
-    setIsClicked(true); // Starts animation after clicking
+    audio.play().catch(error => console.warn("Autoplay blocked by browser. Interaction required for sound."));
   };
 
   useEffect(() => {
-    if (isClicked) {
-      const timer = setTimeout(() => {
-        navigate('/browse');
-      }, 4000);
-      return () => clearTimeout(timer);
-    }
-  }, [isClicked, navigate]);
+    // Start animation and attempt sound play immediately on mount
+    setIsClicked(true);
+    handlePlaySound();
+
+    const timer = setTimeout(() => {
+      navigate('/browse');
+    }, 3500); // 3.5 seconds to allow for the logo animation to finish
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
     <div className="netflix-container" onClick={handlePlaySound}>
